@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Random{% endblock %}
+
+{% block body %}
+
+    <div>
+        Hey, {{ app.request.query.get('name') | default('Unknown Random Person') }}
+    </div>
+
+    <div>
+        Just passed this random number from the controller: {{ some_random_int | default('ERROR') }}
+    </div>
+
+{% endblock %}
